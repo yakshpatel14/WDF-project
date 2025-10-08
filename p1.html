@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dell Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #eaf6f6, #ffffff);
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: #0c2d48;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    header img {
+      height: 60px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+    }
+
+    nav {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #00d4ff;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .search-login {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-login input {
+      padding: 8px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .search-login button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 20px;
+      background-color: #00d4ff;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .search-login button:hover {
+      background-color: #0fb7d0;
+      transform: scale(1.05);
+    }
+
+    main {
+      padding: 40px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .hero-banner {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .hero-banner img:hover {
+      transform: scale(1.02);
+    }
+
+    .explore-section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .button-grid a button {
+      padding: 15px 30px;
+      background-color: #0c2d48;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .button-grid a button:hover {
+      background-color: #145374;
+      transform: scale(1.05);
+    }
+
+    .info-banner img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    footer {
+      background-color: #0c2d48;
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="lc.html">Laptops</a>
+      <a href="md.html">Desktops</a>
+      <a href="a.html">Accessories</a>
+      <a href="ss.html">Software</a>
+      <a href="hs.html">Hardware</a>
+      <a href="login.php">Admin</a>
+    </nav>
+    <div class="search-login">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+      <a href="p2.html"><button>SIGN UP</button></a>
+      <a href="p3.php"><button>LOGIN</button></a>
+      <a href="faq.html"><button>FAQ</button></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-banner">
+      <img src="https://img-prd-pim.poorvika.com/pageimg/Main-Banner-dell-mb.webp" alt="Dell Banner">
+      <img src="https://m.media-amazon.com/images/S/aplus-media/sota/67861fb8-9eaf-49e0-87e4-501c493c3efe.__CR98,0,978,605_PT0_SX970_V1___.jpg" alt="Dell Products">
+    </section>
+
+    <section class="explore-section">
+      <h2>Explore Our Products & Services</h2>
+      <div class="button-grid">
+        <a href="myo.html"><button>My Orders</button></a>
+        <a href="cart.html"><button>Cart</button></a>
+        <a href="cw.html"><button>Buy Warranty</button></a>
+        <a href="lc.html"><button>Laptops</button></a>
+        <a href="md.html"><button>Monitors</button></a>
+        <a href="a.html"><button>Accessories</button></a>
+        <a href="ss.html"><button>Software Services</button></a>
+        <a href="hs.html"><button>Hardware Services</button></a>
+      </div>
+    </section>
+
+    <div class="info-banner">
+      <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/franchise-page/server-franchise/bulkshoot-datacenter-ai-servers-poweredge-xe9680-1920x624.png?fmt=jpg&wid=1920&hei=624" alt="AI Server">
+    </div>
+  </main>
+
+  <footer>
+    <h2>DISCLAIMER</h2>
+    <p>
+      † Screen Simulated, Subject to change. Feature availability and rollout timing varies by market and device.<br>
+      Dell has the industry's most comprehensive portfolio of multicloud-capable storage from a single vendor for the modern datacenter. Based on Dell analysis, September 2024.<br>
+      IDC Quarterly Enterprise Storage Systems Tracker, 2024Q4 Final Historical Release, March 13, 2025 - Vendor Revenue.
+    </p>
+  </footer>
+
+</body>
+</html>

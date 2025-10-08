@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dell Laptops and Computers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #232d41;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      text-align: right;
+      flex-grow: 1;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: 1px solid #ccc;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0 10px 0;
+      color: #000000;
+    }
+
+    .product-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding-bottom: 15px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card p {
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .btn {
+      margin: 5px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cart-btn {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    .cart-btn:hover {
+      background-color: #a1acb4;
+    }
+
+    .buy-btn {
+      background-color: #839687;
+      color: white;
+    }
+
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="p1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo"></a>
+    <h1>DELL LAPTOPS AND COMPUTERS</h1>
+  </header>
+
+  <hr>
+  <h2>LAPTOPS</h2>
+  <div class="product-table">
+    <div class="product-card">
+      <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/inspiron-notebooks/14-5420/pdp/laptop-inspiron-14-5420-pdp-hero-sl.psd?qlt=95&fit=constrain,1&hei=400&wid=570&fmt=jpg" alt="Dell Inspiron 14 5420">
+      <p>Dell Inspiron 14 5420</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/611sh6oMXqL.jpg" alt="Dell G15 5530 Gaming Laptop">
+      <p>Dell G15 5530 Gaming Laptop</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6372/6372667_sd.jpg" alt="Dell XPS 13 Plus">
+      <p>Dell XPS 13 Plus</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://staticg.sportskeeda.com/editor/2022/04/c8469-16510096576623-1920.jpg" alt="Dell Alienware">
+      <p>Dell Alienware</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://i.dell.com/is/image/DellContent/content/dam/images/products/laptops-and-2-in-1s/latitude/15-3550-non-touch/la3550nt-cnb-05000ff090-gy-campaign.psd?$S7-480wide$&layer=1&perspective=625,819,3375,819,3375,2367,625,2367&pos=-307,-686&src=is%7BDellContent/adobestock-643022284?size=4000,4000%7D" alt="Dell Latitude 15 3550">
+      <p>Dell Latitude 15 3550</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+  </div>
+
+  <hr>
+  <h2>COMPUTERS</h2>
+  <div class="product-table">
+    <div class="product-card">
+      <img src="https://i5.walmartimages.com/seo/DELL-Optiplex-7040-Desktop-Computer-PC-Intel-Quad-Core-i5-2TB-HDD-8GB-DDR3-RAM-Windows-10-Pro-DVD-WIFI-19in-Monitor-USB-Keyboard-Mouse-Used-Like-New_41224d19-23ba-45c6-9a5d-5686b9504186.b5b1c711738ae62d5a719260b2c74e8b.jpeg" alt="Dell OptiPlex 7040">
+      <p>Dell OptiPlex 7040</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://i5.walmartimages.com/asr/beff4205-dfa7-4344-89cd-00fdb361d241.2b0bdc28850cbf3568fa64918e37a138.jpeg" alt="Dell OptiPlex 3050">
+      <p>Dell OptiPlex 3050</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://i5.walmartimages.com/seo/Restored-Dell-OptiPlex-7010-SFF-Desktop-Computer-Intel-Core-i5-3470-3-2-GHz-16GB-RAM-1TB-HDD-Windows-10-22-LCD-Refurbished_04806937-0bd3-445a-9b50-ba887e001d78.21820c1035a44e2474dd4f84b8c8f4b5.jpeg?odnHeight=208&odnWidth=208&odnBg=FFFFFF" alt="Dell OptiPlex 7010">
+      <p>Dell OptiPlex 7010</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://i5.walmartimages.com/asr/42de8de9-3498-4f9d-a2a6-4a696526676d.cdabd858d9d7f17f2c957a00221ed320.jpeg" alt="Dell Gaming PC">
+      <p>Dell Gaming Desktop</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://files.tecnoblog.net/wp-content/uploads/2017/09/Dell-PC-Gamer-Inspiron-6.jpg" alt="Dell Inspiron Gaming Desktop">
+      <p>Dell Inspiron Gaming Desktop</p>
+      <button class="btn cart-btn">Add to Cart</button>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>

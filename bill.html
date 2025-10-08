@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dell Invoice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f2f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+     #btn{
+      align-items: left;
+      size: auto;
+      background-color: #ffffff;
+      color: rgb(15, 14, 14);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    #btn:hover{
+      background-color: #8d969b;
+      transform: scale(1.03);
+    }
+
+    .bill-container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .print-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      background-color: #007db8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .print-btn:hover {
+      background-color: #005a87;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+
+    .bill-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .bill-header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .bill-header h1 {
+      font-size: 28px;
+      color: #232d41;
+    }
+
+    .bill-info p {
+      margin: 8px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .products-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .products-table th,
+    .products-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .products-table th {
+      background-color: #e0e0e0;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 10px;
+    }
+
+    .thank-you {
+      margin-top: 30px;
+      text-align: center;
+      font-weight: bold;
+      color: #007db8;
+    }
+  </style>
+</head>
+<body>
+    <header>
+  <a  href="p1.html"><button id="btn">HOME</button></a>
+</header>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="bill-container">
+    <button class="print-btn" onclick="window.print()">Print Invoice</button>
+
+    <div class="bill-header">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo">
+      <h1>INVOICE</h1>
+    </div>
+
+    <div class="bill-info">
+      <p><strong>Date:</strong> 2023-10-01</p>
+      <p><strong>Customer Name:</strong> John Doe</p>
+      <p><strong>Order ID:</strong> 123456789</p>
+      <p><strong>Payment Mode:</strong> Cash</p>
+      <p><strong>Payment Status:</strong> Paid</p>
+    </div>
+
+    <table class="products-table">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Qty</th>
+          <th>Unit Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dell Alienware Laptop</td>
+          <td>1</td>
+          <td>₹1,20,000</td>
+          <td>₹1,20,000</td>
+        </tr>
+        <tr>
+          <td>Dell MS116 Mouse</td>
+          <td>2</td>
+          <td>₹500</td>
+          <td>₹1,000</td>
+        </tr>
+        <tr>
+          <td>Dell KB216 Keyboard</td>
+          <td>1</td>
+          <td>₹1,000</td>
+          <td>₹1,000</td>
+        </tr>
+        <tr>
+          <td>Dell Pro Backpack</td>
+          <td>1</td>
+          <td>₹2,000</td>
+          <td>₹2,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      Grand Total: ₹1,24,000
+    </div>
+
+    <div class="thank-you">
+      Thank you for shopping with Dell!
+    </div>
+  </div>
+
+</body>
+</html>

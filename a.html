@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dell Accessories</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #232d41;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      flex-grow: 1;
+      text-align: right;
+    }
+
+    hr {
+      border: 1px solid #ccc;
+      margin: 10px 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 30px 0 20px;
+      color: #000;
+      font-size: 24px;
+    }
+
+    .section {
+      padding: 10px 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 240px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .product-card p {
+      padding: 10px 10px 5px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .btn {
+      margin: 5px 4px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .cart-btn {
+      background-color: #0077cc;
+      color: white;
+    }
+    .cart-btn:hover {
+      background-color: #7d8e9a;
+    }
+
+    .buy-btn {
+      background-color: #708776;
+      color: white;
+    }
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+
+    main {
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="p1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo"></a>
+    <h1>ACCESSORIES</h1>
+  </header>
+
+  <main>
+    <!-- KEYBOARD AND MOUSE -->
+    <div class="section">
+      <h2>KEYBOARD AND MOUSE</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://www.bbassets.com/media/uploads/p/l/40195886_2-dell-kb216-multimedia-keyboard-wired.jpg" alt="Dell Keyboard">
+          <p>Dell KB216 Wired Multimedia Keyboard</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/41ACXh0-J5L.jpg" alt="Dell Mouse">
+          <p>Dell MS116 Wiredkeyboard</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/input-devices/dell/mouse/wm126/dell-mouse-wm126-504x350.jpg" alt="Dell Wireless Mouse">
+          <p>Dell WM126 Wireless Mouse</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://images.meesho.com/images/products/253105002/luhkb_512.webp" alt="Keyboard and Mouse Combo">
+          <p>Dell KM117 Wireless Keyboard & Mouse Combo</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADPHONES -->
+    <div class="section">
+      <h2>HEADPHONES AND OTHER ACCESSORIES</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/peripherals/headphones/wl7024/pdp/headset-dell-wl7024-hero.psd" alt="Wireless Headset">
+          <p>Dell WL7024 Wireless Headset</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://www.tpstech.in/cdn/shop/files/headset-aw720h-black-gallery-1.png" alt="Alienware Headset">
+          <p>Dell Alienware AW720H Wired Headset</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMLavp2bcOaU3mZanrVoC8wWPJFcVQC_91Ha8rly15sx14PG0qTw2HroY2S-b06bjijOo&usqp=CAU" alt="Wire Set">
+          <p>Dell Wire Set</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://snpi.dell.com/snp/images/products/large/en-in~450-AKMT/450-AKMT.jpg" alt="Multi Purpose Accessory">
+          <p>Dell Multi Purpose</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BAGS -->
+    <div class="section">
+      <h2>BAGS</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://rukminim2.flixcart.com/image/850/1000/k7m8brk0/bags/laptop-backpack/q/8/p/dell-pro-backpack-15-original-imafptcrkfgap7te.jpeg?q=20&crop=false" alt="Pro Backpack">
+          <p>Dell Pro Backpack 15</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://vsprod.vijaysales.com/media/catalog/product/2/2/222634-image1_1.jpg?optimize=medium&fit=bounds&height=500&width=500" alt="Urban Backpack">
+          <p>Dell Urban Backpack</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://rukminim3.flixcart.com/image/850/1000/xif0q/bags/laptop-backpack/q/n/x/es1520p-dell-original-imagkhb6pjahbawv.jpeg?q=90&crop=false" alt="Essential Backpack">
+          <p>Dell Essential Backpack</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+        <div class="product-card">
+          <img src="https://5.imimg.com/data5/OB/EO/MY-5378502/dell-laptop-bag.jpg" alt="Laptop Bag">
+          <p>Dell Laptop Bag</p>
+          <button class="btn cart-btn">Add to Cart</button>
+          <button class="btn buy-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

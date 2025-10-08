@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic FAQ & Popup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .popup {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: #fff;
+      padding: 15px 20px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      z-index: 2000;
+      animation: slideDown 0.7s ease;
+    }
+
+    @keyframes slideDown {
+      from { top: -100px; opacity: 0; }
+      to { top: 20px; opacity: 1; }
+    }
+
+    #closePopup {
+      float: right;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 20px;
+    }
+
+    #faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgb(246, 246, 246);
+      height: 100%;
+      width:auto;
+    }
+
+    .faq-item {
+      background: #6e8c95;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      padding: 2%;
+    }
+
+    .faq-item:hover {
+      transform: scale(1.01);
+    }
+
+    .faq-question {
+      padding: 15px 20px;
+      background-color: #344358;
+      color: white;;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 20%;
+      border-bottom: 1px solid #e0e0e0;
+      transition: background 0.5s;
+      align-content: center;
+      justify-content: center; 
+      text-align: center;
+    }
+
+    .faq-question:hover {
+      background-color: #383b42;
+    }
+
+    .faq-answer {
+      padding: 15px 20px;
+      display: none;
+      background-color: #ffffff;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    #button{
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #00d4ff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+    #button1{
+        display:block;
+        width:70px;
+        margin:auto;
+        padding:10px;
+        background-color: #00d4ff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <a id="button1" href="p1.html"><button align="right" id="button1">HOME</button></a>
+    </header>
+  <div id="notification" class="popup">
+    Welcome to the Dynamic FAQ Page!
+    <span id="closePopup">&times;</span>
+  </div>
+<br>
+<br>
+<br>
+
+  <h2>Frequently Asked Questions</h2>
+  <div id="faq-container"></div>
+  <h2>ASK NEW QUESTION</h2>
+  <button id="button">ASK QUE</button>
+<script src="script.js"></script>
+</body>
+</html>

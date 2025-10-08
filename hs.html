@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hardware Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fb;
+      color: #333;
+    }
+
+    header {
+      background-color: #0b1c35;
+      display: flex;
+      align-items: center;
+      padding: 20px 30px;
+    }
+
+    header img {
+      height: 70px;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    hr {
+      border: none;
+      height: 3px;
+      background-color: #dbe2ea;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #000000;
+      margin-bottom: 25px;
+    }
+
+    h4 {
+      font-size: 20px;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    ul li {
+      font-size: 16px;
+      margin: 6px 0;
+      color: #444;
+    }
+
+    input[type="text"] {
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 260px;
+      font-size: 16px;
+      margin-top: 10px;
+      outline: none;
+      transition: 0.3s border-color, box-shadow;
+    }
+
+    input[type="text"]:focus {
+      border-color: #0b1c34;
+      box-shadow: 0 0 6px rgba(11, 94, 215, 0.2);
+    }
+
+    button {
+      padding: 12px 24px;
+      margin-top: 20px;
+      background-color: #101d31;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8491a5;
+    }
+
+    h2 {
+      margin-top: 50px;
+      font-size: 20px;
+      color: #0e1c3d;
+    }
+
+    .bottom-image {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .bottom-image img {
+      width: 60%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      header img {
+        margin: 0 0 10px 0;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      input[type="text"] {
+        width: 80%;
+      }
+
+      .bottom-image img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="p1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo"></a>
+    <h1>HARDWARE SERVICES</h1>
+  </header>
+
+  <hr>
+
+  <main>
+    <h3>Enter model number of your device to claim warranty</h3>
+
+    <h4>Warranty covers</h4>
+    <ul>
+      <li>✔ Body damage</li>
+      <li>✔ Water inside system</li>
+      <li>✔ Broken body by falling system</li>
+      <li>✔ Scratch recovery</li>
+    </ul>
+
+    <input type="text" placeholder="Enter model number">
+    <br>
+    <button>Search</button>
+
+    <h2>Extend 5 years HARDWARE warranty in ₹10,000</h2>
+    <button>BUY EXTENSION</button>
+
+    <div class="bottom-image">
+      <img src="https://advancenetgroup.com/Portals/0/xBlog/uploads/2021/1/12/dell%20tech%20cyber%20security.jpg" alt="Hardware Services Image">
+    </div>
+  </main>
+
+</body>
+</html>

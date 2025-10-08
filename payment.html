@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Realistic Debit Card Payment</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .payment-title h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      max-width: 480px;
+      width: 90%;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      width: 100%;
+      height: 220px;
+    }
+
+    .creditcard {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      color: white;
+      position: relative;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+      overflow: hidden;
+    }
+
+    .creditcard.flip {
+      transform: rotateY(180deg);
+    }
+
+    .creditcard .front, .creditcard .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .creditcard .back {
+      background: #1c1c1c;
+      transform: rotateY(180deg);
+      text-align: right;
+    }
+
+    .card-type {
+      font-size: 16px;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .card-number {
+      font-size: 22px;
+      letter-spacing: 3px;
+      font-weight: 500;
+    }
+
+    .card-holder, .expiry {
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .label {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .cvv-label {
+      font-size: 14px;
+    }
+
+    .cvv-value {
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+
+    .form-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "name name"
+        "number number"
+        "expiration security";
+      gap: 16px;
+      width: 100%;
+    }
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    #payButton {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #payButton:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-title">
+    <h1>Secure Debit Card Payment</h1>
+  </div>
+  <div class="main-wrapper">
+    <div class="card-container">
+      <div class="creditcard" id="creditcard">
+        <div class="front">
+          <div class="card-type" id="cardType">Debit Card</div>
+          <div class="card-number" id="cardNumberDisplay">XXXX XXXX XXXX XXXX</div>
+          <div class="card-holder">
+            <div>
+              <div class="label">Card Holder</div>
+              <div id="cardHolderDisplay">Your Name</div>
+            </div>
+            <div>
+              <div class="label">Expires</div>
+              <div id="cardExpiryDisplay">MM/YY</div>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cvv-label">CVV</div>
+          <div class="cvv-value" id="cvvDisplay">•••</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <div class="field-container" style="grid-area: name;">
+        <label for="name">Cardholder Name</label>
+        <input id="name" type="text" maxlength="20">
+      </div>
+      <div class="field-container" style="grid-area: number;">
+        <label for="cardnumber">Card Number</label>
+        <input id="cardnumber" type="text" maxlength="19" pattern="[0-9]*" inputmode="numeric" placeholder="XXXX XXXX XXXX XXXX">
+      </div>
+      <div class="field-container" style="grid-area: expiration;">
+        <label for="expirationdate">Expiration (MM/YY)</label>
+        <input id="expirationdate" type="text" placeholder="MM/YY" maxlength="5">
+      </div>
+      <div class="field-container" style="grid-area: security;">
+        <label for="securitycode">CVV</label>
+        <input id="securitycode" type="password" maxlength="4" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+    <button id="payButton"><a href="bill.html">Proceed to Pay</a></button>
+  </div>
+
+  <script>
+    const cardInput = document.getElementById('cardnumber');
+    const cardDisplay = document.getElementById('cardNumberDisplay');
+    const cardBox = document.getElementById('creditcard');
+    const cardType = document.getElementById('cardType');
+    const nameInput = document.getElementById('name');
+    const nameDisplay = document.getElementById('cardHolderDisplay');
+    const expInput = document.getElementById('expirationdate');
+    const expDisplay = document.getElementById('cardExpiryDisplay');
+    const cvvInput = document.getElementById('securitycode');
+    const cvvDisplay = document.getElementById('cvvDisplay');
+
+    function formatCardNumber(value) {
+      return value.replace(/\D/g, '').substring(0, 16).replace(/(.{4})/g, '$1 ').trim();
+    }
+
+    function detectCardType(number) {
+      const firstDigit = number.charAt(0);
+      if (firstDigit === '1') return { name: "Pay1 Card", class: "lightblue" };
+      if (firstDigit === '2') return { name: "Easy Card", class: "red" };
+      return { name: "Debit Card", class: "" };
+    }
+
+    cardInput.addEventListener('input', () => {
+      const raw = cardInput.value.replace(/\s/g, '');
+      const limited = raw.substring(0, 16);
+      const formatted = formatCardNumber(limited);
+      cardInput.value = formatted;
+      cardDisplay.textContent = formatted || 'XXXX XXXX XXXX XXXX';
+
+      const { name } = detectCardType(limited);
+      cardType.textContent = name;
+    });
+
+    nameInput.addEventListener('input', () => {
+      nameDisplay.textContent = nameInput.value || 'Your Name';
+    });
+
+    expInput.addEventListener('input', () => {
+      let value = expInput.value.replace(/[^\d]/g, '');
+      if (value.length > 2) {
+        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+      }
+      expInput.value = value.substring(0, 5);
+      expDisplay.textContent = expInput.value || 'MM/YY';
+    });
+
+    cvvInput.addEventListener('input', () => {
+      const len = cvvInput.value.length;
+      cvvDisplay.textContent = '•'.repeat(len) || '•••';
+    });
+
+    cvvInput.addEventListener('focus', () => {
+      cardBox.classList.add('flip');
+    });
+
+    cvvInput.addEventListener('blur', () => {
+      cardBox.classList.remove('flip');
+    });
+
+    document.getElementById('payButton').addEventListener('click', () => {
+      alert("✅ Payment Processed Successfully!");
+    });
+  </script>'
+
+</body>
+</html>

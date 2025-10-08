@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Check Warranty</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0a113c;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      font-size: 26px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #041836;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input[type="text"] {
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      width: 250px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #232d3b;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #151617;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0a104c;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="p1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAoW-UhuzHjVAKTECgN-fuEAe0sVBvo6U12w&s" alt="Dell Logo"></a>
+    <h1>CHECK WARRANTY</h1>
+  </header>
+
+  <hr>
+
+  <main>
+    <h3>Enter model number to check your warranty status</h3>
+    <div class="input-group">
+      <input type="text" placeholder="Enter model number">
+      <button>Search</button>
+    </div>
+            <img src="https://it-online.co.za/wp-content/uploads/2022/10/Dell-Cybersecurity-640x430-Article-Channelwise-IT-Online-incl-Newsletter.jpg" alt="Warranty Image" style="margin-top: 20px; width:40%; height:40%; border-radius: 10px;">
+    
+  </main>
+
+</body>
+</html>

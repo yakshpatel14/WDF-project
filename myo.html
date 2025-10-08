@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Summary - Dell</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #232d41;
+    }
+
+    .order-info {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .order-info p {
+      margin: 4px;
+      font-size: 16px;
+    }
+
+    .cart-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .cart-item {
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .cart-item:hover {
+      transform: scale(1.02);
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .cart-item p {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .status {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .total-section {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #232d41;
+    }
+
+    .print-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .print-btn button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .print-btn button:hover {
+      background-color: #0056b3;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Order Summary</h1>
+
+  <div class="order-info">
+    <p><strong>Order ID:</strong> #DEL567823</p>
+    <p><strong>Date:</strong> July 6, 2025</p>
+    <p><strong>Customer Name:</strong> John Doe</p>
+    <p><strong>Payment:</strong> Paid via UPI</p>
+  </div>
+
+  <div class="cart-container">
+
+    <div class="cart-item">
+      <img src="https://staticg.sportskeeda.com/editor/2022/04/c8469-16510096576623-1920.jpg" alt="Dell Alienware">
+      <p>Dell Alienware</p>
+      <div class="status">✔ Delivered</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://m.media-amazon.com/images/I/41ACXh0-J5L.jpg" alt="Dell Mouse">
+      <p>Dell MS116 Wired Keyboard</p>
+      <div class="status">✔ Delivered</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://images.meesho.com/images/products/253105002/luhkb_512.webp" alt="Keyboard and Mouse Combo">
+      <p>Dell KM117 Wireless Keyboard & Mouse Combo</p>
+      <div class="status">✔ Delivered</div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://vsprod.vijaysales.com/media/catalog/product/2/2/222634-image1_1.jpg?optimize=medium&fit=bounds&height=500&width=500" alt="Urban Backpack">
+      <p>Dell Urban Backpack</p>
+      <div class="status">✔ Delivered</div>
+    </div>
+
+  </div>
+
+  <div class="total-section">
+    Total Paid: ₹65,000
+  </div>
+
+  <div class="print-btn">
+    <button onclick="window.print()">🖨️ Print Invoice</button>
+  </div>
+
+</body>
+</html>

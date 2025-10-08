@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - Dell</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #232d41;
+    }
+
+    .cart-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .cart-item {
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .cart-item:hover {
+      transform: scale(1.02);
+    }
+
+    .cart-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .cart-item p {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buy-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .buy-btn:hover {
+      background-color: #218838;
+    }
+
+    .final-buy {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .final-buy button {
+      padding: 12px 28px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .final-buy button:hover {
+      background-color: #0056b3;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Cart</h1>
+
+  <div class="cart-container">
+
+    <div class="cart-item">
+      <img src="https://staticg.sportskeeda.com/editor/2022/04/c8469-16510096576623-1920.jpg" alt="Dell Alienware">
+      <p>Dell Alienware</p>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://m.media-amazon.com/images/I/41ACXh0-J5L.jpg" alt="Dell Mouse">
+      <p>Dell MS116 Wired Keyboard</p>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://images.meesho.com/images/products/253105002/luhkb_512.webp" alt="Keyboard and Mouse Combo">
+      <p>Dell KM117 Wireless Keyboard & Mouse Combo</p>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://vsprod.vijaysales.com/media/catalog/product/2/2/222634-image1_1.jpg?optimize=medium&fit=bounds&height=500&width=500" alt="Urban Backpack">
+      <p>Dell Urban Backpack</p>
+      <button class="btn buy-btn">Buy Now</button>
+    </div>
+
+  </div>
+
+  <div class="final-buy">
+    <a href="payment.html"><button>Proceed to BUY NOW</button></a>
+  </div>
+
+</body>
+</html>
